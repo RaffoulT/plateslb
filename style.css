@@ -52,7 +52,9 @@ header h1 {
     letter-spacing: -0.025em;
     background: linear-gradient(to right, #60a5fa, #34d399);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
+    color: transparent;
     margin-bottom: 0.5rem;
 }
 
@@ -123,7 +125,7 @@ header p {
     margin-bottom: 4px;
 }
 
-.band-text-en {
+.band-text-class {
     font-size: 0.6rem;
     font-weight: bold;
     writing-mode: vertical-rl;

@@ -1,33 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lebanese Plate Visualizer</title>
-    <meta name="description" content="View and design custom Lebanese license plates with a premium interactive visualizer.">
+    <meta name="description"
+        content="View and design custom Lebanese license plates with a premium interactive visualizer.">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Oswald:wght@500;700&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <div class="app-container">
         <header>
             <h1>Plate Visualizer</h1>
-            <p>Design your custom Lebanese license plate</p>
+            <p>Lookup a plate</p>
         </header>
 
         <main>
             <div class="plate-container" id="plate-container">
                 <div class="plate" id="plate">
                     <div class="plate-blue-band">
-                        <div class="cedar-tree">🌲</div>
                         <div class="band-text-ar">لبنان</div>
-                        <div class="band-text-en">LIBAN</div>
+                        <div class="cedar-tree">🌲</div>
+                        <div class="band-text-class">خصوصية</div>
                     </div>
                     <div class="plate-content">
                         <div class="plate-letter" id="display-letter">B</div>
-                        <div class="plate-divider"></div>
                         <div class="plate-number" id="display-number">123456</div>
                     </div>
                 </div>
@@ -37,24 +40,32 @@
                 <div class="control-group">
                     <label for="letter-picker">Region / Code</label>
                     <select id="letter-picker" class="premium-input">
-                        <option value="A">A - Tripoli</option>
-                        <option value="B" selected>B - Beirut</option>
-                        <option value="C">C - Mount Lebanon</option>
-                        <option value="D">D</option>
-                        <option value="G">G - Jounieh</option>
-                        <option value="J">J - Justice</option>
-                        <option value="M">M - Mount Lebanon</option>
-                        <option value="N">N - Nabatieh</option>
-                        <option value="O">O - Ouzai</option>
-                        <option value="S">S - Sidon</option>
-                        <option value="T">T - Tripoli</option>
-                        <option value="Z">Z - Zahle</option>
+                        <optgroup label="Regions">
+                            <option value="B" selected>B - Beirut</option>
+                            <option value="G">G - Jounieh</option>
+                            <option value="K">K - Baalbek</option>
+                            <option value="N">N - Nabatieh</option>
+                            <option value="O">O - Ouzai</option>
+                            <option value="S">S - Saida</option>
+                            <option value="T">T - Tripoli</option>
+                            <option value="Y">Y - Aley</option>
+                            <option value="Z">Z - Zahleh</option>
+                        </optgroup>
+                        <optgroup label="Vehicle Types & Special">
+                            <option value="AP">AP - Parliament</option>
+                            <option value="D">D - Diplomatic</option>
+                            <option value="J">J - Judiciary</option>
+                            <option value="M">M - Motorcycles & Commercial</option>
+                            <option value="P">P - Public Transport</option>
+                            <option value="R">R - Religious Courts</option>
+                        </optgroup>
                     </select>
                 </div>
 
                 <div class="control-group">
                     <label for="number-input">Plate Sequence</label>
-                    <input type="text" id="number-input" class="premium-input" placeholder="Up to 7 digits" maxlength="7" value="123456" inputmode="numeric">
+                    <input type="text" id="number-input" class="premium-input" placeholder="Up to 7 digits"
+                        maxlength="7" value="123456" inputmode="numeric">
                 </div>
             </div>
         </main>
@@ -62,4 +73,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
