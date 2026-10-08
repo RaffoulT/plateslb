@@ -73,11 +73,12 @@ header p {
 
 .plate {
     width: 100%;
-    max-width: 520px;
-    height: 110px;
+    max-width: 320px;
+    height: 160px;
     background-color: var(--plate-bg);
     border-radius: 8px;
     display: flex;
+    flex-direction: column;
     overflow: hidden;
     box-shadow: 
         0 20px 25px -5px rgba(0, 0, 0, 0.5),
@@ -99,37 +100,32 @@ header p {
 }
 
 .plate-blue-band {
-    width: 45px;
+    width: 100%;
+    height: 35px;
     background-color: var(--plate-blue);
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     color: white;
-    padding: 5px 0;
-    border-right: 2px solid rgba(0,0,0,0.2);
+    padding: 0 15px;
+    border-bottom: 2px solid rgba(0,0,0,0.2);
     z-index: 1;
 }
 
 .cedar-tree {
     font-size: 1.2rem;
-    margin-bottom: 2px;
     filter: drop-shadow(0 1px 1px rgba(0,0,0,0.5));
 }
 
 .band-text-ar {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     font-weight: bold;
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
-    margin-bottom: 4px;
 }
 
 .band-text-class {
-    font-size: 0.6rem;
+    font-size: 0.8rem;
     font-weight: bold;
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
 }
 
 .plate-content {
@@ -144,7 +140,7 @@ header p {
 
 .plate-letter, .plate-number {
     font-family: 'Oswald', sans-serif;
-    font-size: 4.5rem;
+    font-size: 3.5rem;
     font-weight: 700;
     color: var(--plate-text);
     line-height: 1;
@@ -242,23 +238,37 @@ select.premium-input option {
     }
     
     .plate {
-        height: 80px;
-        max-width: 100%;
+        height: 140px;
+        max-width: 280px;
     }
     
     .plate-letter, .plate-number {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
     
     .plate-blue-band {
-        width: 35px;
+        height: 30px;
+        padding: 0 10px;
     }
     
     .cedar-tree {
         font-size: 0.9rem;
     }
     
-    .band-text-ar, .band-text-en {
-        font-size: 0.5rem;
+    .band-text-ar, .band-text-class {
+        font-size: 0.7rem;
     }
+}
+
+/* Category Color Variants */
+.plate.plate-public {
+    background-color: #ef4444;
+}
+
+.plate.plate-diplomatic {
+    background-color: #facc15;
+}
+
+.plate-blue-band.band-red {
+    background-color: #ef4444;
 }

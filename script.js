@@ -6,9 +6,39 @@ document.addEventListener('DOMContentLoaded', () => {
     const plate = document.getElementById('plate');
     const plateContainer = document.getElementById('plate-container');
 
-    // Update Plate Letter
+    const plateBand = document.getElementById('plate-band');
+    const plateClassification = document.getElementById('plate-classification');
+
+    // Update Plate Letter and Category styles
     letterPicker.addEventListener('change', (e) => {
-        displayLetter.textContent = e.target.value;
+        const val = e.target.value;
+        displayLetter.textContent = val;
+        
+        // Reset classes
+        plate.className = 'plate';
+        plateBand.className = 'plate-blue-band';
+        
+        // Apply specific designs based on category
+        if (val === 'P') {
+            plate.classList.add('plate-public');
+            plateClassification.textContent = 'عمومية';
+        } else if (val === 'D') {
+            plate.classList.add('plate-diplomatic');
+            plateClassification.textContent = 'دبلوماسية';
+        } else if (val === 'J') {
+            plateBand.classList.add('band-red');
+            plateClassification.textContent = 'قضاء';
+        } else if (val === 'AP') {
+            plateClassification.textContent = 'مجلس النواب';
+        } else if (val === 'M') {
+            plateClassification.textContent = 'دراجة/تجارية';
+        } else if (val === 'R') {
+            plateClassification.textContent = 'محكمة';
+        } else {
+            // Default region
+            plateClassification.textContent = 'خصوصية';
+        }
+
         animatePlateUpdate();
     });
 
